@@ -8,7 +8,10 @@ import {Component} from '@angular/core';
 export class AppComponent {
     title = 'external-angular-elements';
 
+    isLoading: boolean;
+
     _click(event) {
+        this.isLoading = !this.isLoading;
         console.log(event);
     }
 }

@@ -126,11 +126,6 @@
                         ],
                         "styles": [
                             "projects/angular-element-template/src/styles.css"
-                        ],
-                        "scripts": [
-                            {
-                                "input": "node_modules/document-register-element/build/document-register-element.js"
-                            }
                         ]
                     },
                     "configurations": {
@@ -251,7 +246,7 @@
             "schematics": {},
             "architect": {
                 "build": {
-                    "builder": "@angular-devkit/build-angular:browser",
+                    "builder": "ngx-build-plus:build",
                     "options": {
                         "outputPath": "dist/external-angular-elements",
                         "index": "projects/external-angular-elements/src/index.html",

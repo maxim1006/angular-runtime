@@ -2,4 +2,8 @@
     Welcome to {{ title }}!
 </h1>
 
-<app-button-element text="App button element" (appButtonClick)="_click($event)"></app-button-element>
+<app-button-element
+    text="App button"
+    [isLoading]="isLoading"
+    (appButtonClick)="_click($event)"
+></app-button-element>
