@@ -1,0 +1,16 @@
+<button
+    class="app-button-element__button {{state.styleClass}}"
+    [attr.type]="state.type"
+>
+    <span class="app-button-element__button-text">
+        {{text}}
+    </span>
+</button>
+
+<span class="app-button-element__loader" *ngIf="isLoading">
+    <ng-content select=".app-button-element__custom-loader"></ng-content>
+
+    <span>
+        Loading...
+    </span>
+</span>

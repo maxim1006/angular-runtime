@@ -17,6 +17,16 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "library-template": [
+        "projects/library-template/src/public_api",
+        "projects/library-template/public_api"
+      ],
+      "library-template/*": [
+        "projects/library-template/src/public_api",
+        "projects/library-template/src/public_api"
+      ]
+    }
   }
 }

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ExternalAngularElements</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<!-- Consider putting the following UMD (!) bundles -->
+<!-- into a big one -->
+
+<!-- core-js for legacy browsers -->
+<!--<script src="./assets/core-js/core.min.js"></script>-->
+
+<!-- Zone.js -->
+<!--
+    Consider excluding zone.js when creating
+    custom Elements by using the noop zone.
+-->
+<script src="./assets/scripts/zone.js/zone.min.js"></script>
+
+<!-- Polyfills for Browsers supporting
+        Custom Elements. Needed b/c we downlevel
+        to ES5. See: @webcomponents/custom-elements
+-->
+<script src="./assets/scripts/custom-elements/src/native-shim.js"></script>
+
+<!-- Polyfills for Browsers not supporting
+        Custom Elements. See: @webcomponents/custom-elements
+
+        check support
+        const supportsCustomElementsV1 = 'customElements' in window;
+-->
+<script src="./assets/scripts/custom-elements/custom-elements.min.js"></script>
+
+<!-- Rx -->
+<script src="./assets/scripts/rxjs/rxjs.umd.min.js"></script>
+
+<!-- Hammer -->
+<!--<script src="./assets/hammer/hammer.min.js"></script>-->
+
+<!-- Angular Packages -->
+<script src="./assets/scripts/core/bundles/core.umd.min.js"></script>
+<script>
+    ng.core.enableProdMode();
+</script>
+<!-- Angular Packages: choose the one that u need -->
+<script src="./assets/scripts/common/bundles/common.umd.min.js"></script>
+<script src="./assets/scripts/platform-browser/bundles/platform-browser.umd.min.js"></script>
+<script src="./assets/scripts/elements/bundles/elements.umd.min.js"></script>
+<!--<script src="./assets/router/bundles/router.umd.min.js"></script>-->
+<!--<script src="./assets/forms/bundles/forms.umd.min.js"></script>-->
+<!--<script src="./assets/animations/bundles/animations.umd.min.js"></script>-->
+<!--<script src="./assets/animations/bundles/animations-browser.umd.min.js"></script>-->
+<!--<script src="./assets/platform-browser/bundles/platform-browser-animations.umd.min.js"></script>-->
+
+
+
+<app-button-element style-class="_main" text="App button element">
+    <span class="custom-loader">Loading...</span>
+</app-button-element>
+
+<app-root></app-root>
+
+
+
+<script src="./assets/external-angular-elements/scripts.js"></script>
+<script src="./assets/external-angular-elements/app-button-element/main.js"></script>
+
+<script>
+    const appButtonElement = document.querySelector("app-button-element");
+
+    // custom event example
+    appButtonElement.addEventListener("appButtonClick", (event) => {
+        appButtonElement.isLoading = !appButtonElement.isLoading;
+        console.log(event); // check for event.detail
+    });
+</script>
+</body>
+</html>
