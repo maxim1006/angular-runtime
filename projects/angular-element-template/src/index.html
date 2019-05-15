@@ -70,6 +70,11 @@
     <button type="button" id="addButtonWithState">Add button with objectInput</button>
 </div>
 
+<!--Custom Elements V1 polyfill-->
+<script>
+    this.customElements
+    || document.write('<script src="./assets/scripts/document-register-element/build/document-register-element.js"><\x2fscript>');
+</script>
 
 <script>
     const appButtonElement = document.querySelector("app-button-element");

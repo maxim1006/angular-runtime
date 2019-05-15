@@ -67,7 +67,13 @@
 <app-root></app-root>
 
 
+<!--Custom Elements V1 polyfill-->
+<script>
+    this.customElements
+    || document.write('<script src="./assets/scripts/document-register-element/build/document-register-element.js"><\x2fscript>');
+</script>
 
+<!--External angular elements-->
 <script src="./assets/external-angular-elements/app-button-element/main.js"></script>
 
 <script>

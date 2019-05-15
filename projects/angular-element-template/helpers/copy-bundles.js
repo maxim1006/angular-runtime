@@ -10,6 +10,6 @@ const copy = require('copy');
 console.log('Copy UMD bundles ...');
 
 copy('node_modules/@angular/*/bundles/*.umd.min.js', 'projects/angular-element-template/src/assets/scripts', {}, _ => {});
-copy('node_modules/rxjs/bundles/*.min.js', 'projects/angular-element-template/src/assets/rxjs/scripts', {}, _ => {});
-copy('node_modules/zone.js/dist/*.min.js', 'projects/angular-element-template/src/assets/zone.js/scripts', {}, _ => {});
-copy('node_modules/core-js/client/*.min.js', 'projects/angular-element-template/src/assets/core-js/scripts', {}, _ => {});
+copy('node_modules/rxjs/bundles/*.min.js', 'projects/angular-element-template/src/assets/scripts/rxjs', {}, _ => {});
+copy('node_modules/zone.js/dist/*.min.js', 'projects/angular-element-template/src/assets/scripts/zone.js', {}, _ => {});
+copy('node_modules/core-js/client/*.min.js', 'projects/angular-element-template/src/assets/scripts/core-js', {}, _ => {});
