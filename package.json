@@ -12,6 +12,7 @@
         "buildL": "ng build library-template",
         "buildAET": "npm run copyScriptsAET && ng build angular-element-template --prod --extraWebpackConfig ./helpers/webpack.extra.js --output-hashing none --single-bundle true",
         "buildEAE": "ng build external-angular-elements --prod --extraWebpackConfig ./helpers/webpack.extra.js --output-hashing none --single-bundle true",
+        "build:ngx": "ng build ngx-build --prod --extraWebpackConfig ./helpers/webpack.extra.js --output-hashing none --single-bundle true",
         "buildServer": "cd ./dist/angular-runtime && ws --spa index.html --compress --open --static.maxage -1",
         "buildServerAEB": "cd ./dist/angular-elements-bundle && ws --spa index.html --compress --open --static.maxage -1",
         "buildServerAET": "cd ./dist/angular-element-template && ws --spa index.html --compress --open --static.maxage -1",
